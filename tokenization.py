@@ -26,7 +26,10 @@ import six
 from six.moves import range
 import tensorflow.compat.v1 as tf
 import tensorflow_hub as hub
-import sentencepiece as spm
+try:
+    import sentencepiece as spm
+except:
+    spm = None
 
 SPIECE_UNDERLINE = u"▁".encode("utf-8")
 
